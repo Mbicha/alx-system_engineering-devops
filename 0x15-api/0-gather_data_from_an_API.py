@@ -2,12 +2,12 @@
 """For a given employee ID, returns information about
 their TODO list progress"""
 
-from sys import argv
 import requests
+import sys
 
 
 if __name__ == "__main__":
-    userId = argv[1]
+    userId = sys.argv[1]
     user = requests.get(
         "https://jsonplaceholder.typicode.com/users/{0}"
         .format(userId))
